@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Student ID: [seneca_id]
+# Student ID: afaiz-ahmad
 class Time:
     """Simple object type for time of the day.
     data attributes: hour, minute, second
@@ -20,6 +20,14 @@ def sum_times(t1, t2):
     sum.hour = t1.hour + t2.hour
     sum.minute = t1.minute + t2.minute
     sum.second = t1.second + t2.second
+
+    while sum.second >= 60:
+        sum.second -= 60
+        sum.minute += 1
+
+    while sum.minute >= 60:
+        sum.minute -= 60
+        sum.hour += 1
     return sum
 
 def valid_time(t):
