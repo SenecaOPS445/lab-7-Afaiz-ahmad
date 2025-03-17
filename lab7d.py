@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-# Student ID: [seneca_id] 
+# Student ID: afaiz-ahmad
+ 
 class Time:
     """Simple object type for time of the day.
         data attributes: hour, minute, second
@@ -19,10 +20,21 @@ class Time:
 
     def sum_times(self, t2):
         """Add two time objests and return the sum."""
-        self_sec = self.time_to_sec()
-        t2_sec = t2.time_to_sec()
-        sum = sec_to_time(self_sec + t2_sec)
-        return sum
+        sum_time = Time(0, 0, 0)
+        sum_time.hour = self.hour + t2.hour
+        sum_time.minute = self.minute + t2.minute
+        sum_time.second = self.second + t2.second
+
+        while sum_time.second >= 60:
+            sum_time.second -= 60
+            sum_time.minute += 1
+
+        while sum_time.minute >= 60:
+            sum_time.minute -= 60
+            sum_time.hour += 1
+
+        return sum_time
+
 
     def change_time(self, seconds):
         time_seconds = self.time_to_sec()
