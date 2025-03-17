@@ -1,0 +1,10 @@
+OPS445 Lab Report - System Information for running ./CheckLab7.py
+=================================================================
+    User login name: afaiz-ahmad
+    Linux system name: afaizahmad-virtual-machine
+    Python executable: /usr/bin/python3
+    Python version: 3123
+    OS Platform: linux
+    Working Directory: /home/afaiz-ahmad/ops445/lab7
+    Start at: Mon Mar 17 14:00:22 2025
+=================================================================
